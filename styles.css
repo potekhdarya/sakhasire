@@ -11,21 +11,48 @@ body {
 .composition {
   position: relative;
   width: 100%;
-  min-height: 100svh;
+  aspect-ratio: 2166 / 1532;
+  overflow: hidden;
 }
 
 .title {
+  position: absolute;
+  z-index: 1;
+  top: 6.2%;
+  left: 3.4%;
   margin: 0;
-  padding: 4.2vw 3.4vw;
   font-family: "Kommuna Narrow", serif;
-  font-size: 4.1vw;
+  font-size: 3.92vw;
   font-weight: 400;
   line-height: 1;
 }
 
+.illustration {
+  position: absolute;
+  top: -2.55%;
+  left: 21.45%;
+  display: block;
+  width: 77.65%;
+  height: auto;
+}
+
 @media (max-width: 600px) {
+  .composition {
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+    aspect-ratio: auto;
+  }
+
   .title {
-    padding: 24px 20px;
+    position: static;
+    margin: 24px 20px 0;
     font-size: clamp(28px, 7vw, 42px);
+  }
+
+  .illustration {
+    position: static;
+    width: 100%;
+    margin-top: 24px;
   }
 }
