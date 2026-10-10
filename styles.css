@@ -31,12 +31,25 @@ body {
 
 .illustration {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
   display: block;
-  width: 100%;
-  height: 100%;
+  width: min(100%, 100svh);
+  height: auto;
   object-fit: contain;
   object-position: right top;
+  transform-origin: center;
+  animation: horseman-frames 1s steps(1, end) infinite;
+}
+
+@keyframes horseman-frames {
+  0%, 100% {
+    transform: scale(0.9) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(0.9) rotate(6deg);
+  }
 }
 
 @media (max-width: 600px) {
