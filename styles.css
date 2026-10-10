@@ -27,6 +27,10 @@ body {
   font-size: 3.92vw;
   font-weight: 400;
   line-height: 1;
+  text-decoration: underline;
+  text-decoration-thickness: 0.04em;
+  text-underline-offset: 0.08em;
+  text-decoration-skip-ink: none;
 }
 
 .illustration {
@@ -39,16 +43,16 @@ body {
   object-fit: contain;
   object-position: right top;
   transform-origin: center;
-  animation: horseman-frames 1s steps(1, end) infinite;
+  animation: horseman-frames 1.6s steps(1, end) infinite;
 }
 
 @keyframes horseman-frames {
   0%, 100% {
-    transform: scale(0.9) rotate(0deg);
+    transform: scale(0.94) rotate(0deg);
   }
 
   50% {
-    transform: scale(0.9) rotate(6deg);
+    transform: scale(0.94) rotate(6deg);
   }
 }
 
@@ -56,6 +60,6 @@ body {
   .title {
     top: 24px;
     left: 5.1%;
-    font-size: 6.4vw;
+    font-size: 5.8vw;
   }
 }
